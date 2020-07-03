@@ -6,6 +6,7 @@ import SignUp from '../pages/SignUp';
 
 import Dashboard from '../pages/Dashboard';
 import Character from '../pages/Character';
+import Starship from '../pages/Starship';
 
 const Routes: React.FC = () => (
   <Switch>
@@ -14,6 +15,7 @@ const Routes: React.FC = () => (
 
     <Route path="/dashboard" exact component={Dashboard} />
     <Route path="/characters" exact component={Character} />
+    <Route path="/starship" exact component={Starship} />
   </Switch>
 );
 

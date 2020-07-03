@@ -8,30 +8,30 @@ import { GiBodyHeight, GiWeight, GiWorld } from 'react-icons/gi';
 import { AiOutlineMan, AiOutlineWoman } from 'react-icons/ai';
 import { FiMoreHorizontal } from 'react-icons/fi';
 
-import { ICharacter } from '../index';
+import { IStarship } from '../index';
 
 import { Container } from './styles';
 
 interface IProps {
-  character: ICharacter;
+  starship: IStarship;
 }
 
-const Cards: React.FC<IProps> = ({ character }: IProps) => {
+const Starship: React.FC<IProps> = ({ starship }: IProps) => {
   return (
     <Container>
       <div>
         <MdPerson size={20} />
-        <p>Name: {character.name}</p>
+        <p>Name: {starship.name}</p>
       </div>
 
       <div>
         <FaBirthdayCake size={20} />
-        <p>Birth Year: {character.birth_year}</p>
+        <p>Passengers: {starship.passengers}</p>
       </div>
 
       {/* <div>
         <GiBodyHeight size={20} />
-        <p>Height: {character.height}</p>
+        <p>Height: {starship.height}</p>
       </div>
 
       <div>
@@ -39,7 +39,7 @@ const Cards: React.FC<IProps> = ({ character }: IProps) => {
         <p>Mass: 77kg</p>
       </div> */}
 
-      {character.gender === 'male' ? (
+      {/* {starship.gender === 'male' ? (
         <div>
           <AiOutlineMan size={20} />
           <p>Gender: Male</p>
@@ -49,12 +49,12 @@ const Cards: React.FC<IProps> = ({ character }: IProps) => {
           <AiOutlineWoman size={20} />
           <p>Gender: Female</p>
         </div>
-      )}
+      )} */}
 
-      {/* <div>
+      <div>
         <GiWorld size={20} />
-        <p>Homeworld: {character.homeworld}</p>
-      </div> */}
+        <p>Length: {starship.length}</p>
+      </div>
 
       <button type="button" onClick={() => alert('q')}>
         <FiMoreHorizontal size={25} />
@@ -63,4 +63,4 @@ const Cards: React.FC<IProps> = ({ character }: IProps) => {
   );
 };
 
-export default Cards;
+export default Starship;

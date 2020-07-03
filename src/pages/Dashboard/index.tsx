@@ -24,31 +24,14 @@ const Dashboard: React.FC = () => {
             <p>Character</p>
           </Link>
         </CategoryCard>
-        {/* <CategoryCard>
-          <Link to="/films">
-            <img src={filmsImg} alt="films" />
-            <p>Films</p>
-          </Link>
-        </CategoryCard> */}
-        {/* <CategoryCard>
-          <Link to="/species">
-            <img src={speciesImg} alt="species" />
-            <p>Species</p>
-          </Link>
-        </CategoryCard> */}
 
         <CategoryCard>
-          <Link to="/">
-            <img src={startshipImg} alt="" />
+          <Link to="/starship">
+            <img src={startshipImg} alt="starships" />
             <p>Starships</p>
           </Link>
         </CategoryCard>
-        {/* <CategoryCard>
-          <Link to="/">
-            <img src={vehiclesImg} alt="" />
-            <p>Vehicles</p>
-          </Link>
-        </CategoryCard> */}
+
         <CategoryCard>
           <Link to="/">
             <img src={planetsImg} alt="" />

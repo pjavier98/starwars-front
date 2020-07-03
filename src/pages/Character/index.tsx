@@ -8,7 +8,7 @@ import swapi from '../../services/swapi';
 
 import { Container, Content } from './styles';
 
-interface Character {
+export interface ICharacter {
   name: string;
   birth_year: string;
   height: string;
@@ -19,7 +19,7 @@ interface Character {
 }
 
 const Characters: React.FC = () => {
-  const [characters, setCharacters] = useState<Character[]>([]);
+  const [characters, setCharacters] = useState<ICharacter[]>([]);
   const [page, setPage] = useState(1);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const Characters: React.FC = () => {
           <CharacterCard key={character.url} character={character} />
         ))}
       </Content>
-      <Pagination page={page} setPage={setPage} />
+      <Pagination page={page} setPage={setPage} totalPages={9} />
     </Container>
   );
 };
