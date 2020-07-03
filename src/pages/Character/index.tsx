@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-import { Link } from 'react-router-dom';
-
 import { RiCloseCircleLine } from 'react-icons/ri';
+import { FaBirthdayCake } from 'react-icons/fa';
+import { IoMdResize } from 'react-icons/io';
+import { GiWeight } from 'react-icons/gi';
+import { AiOutlineMan, AiOutlineWoman } from 'react-icons/ai';
+import { MdInvertColors } from 'react-icons/md';
+import { BsFillPersonFill } from 'react-icons/bs';
 
 import Header from '../../components/Header';
 import Pagination from '../../components/Pagination';
@@ -17,10 +21,6 @@ import {
   ModalContent,
   ModalHeader,
   CharacterDescription,
-  Description,
-  HomeWorld,
-  CharacterRelatedThings,
-  RelatedCard,
 } from './styles';
 
 export interface ICharacter {
@@ -75,51 +75,38 @@ const Characters: React.FC = () => {
           </ModalHeader>
           <ModalContent>
             <CharacterDescription>
-              <h4>{selectedCharacter.name}</h4>
-              <Description>
+              <div>
+                <h4>{selectedCharacter.name}</h4>
                 <div>
+                  <FaBirthdayCake size={20} />
                   <p>Birth Year: {selectedCharacter.birth_year}</p>
+                </div>
+                <div>
+                  <IoMdResize size={20} />
                   <p>Height: {selectedCharacter.height}</p>
+                </div>
+                <div>
+                  <GiWeight size={20} />
                   <p>Mass: {selectedCharacter.mass}kg</p>
                 </div>
                 <div>
+                  {selectedCharacter.gender === 'male' ? (
+                    <AiOutlineMan size={20} />
+                  ) : (
+                    <AiOutlineWoman size={20} />
+                  )}
                   <p>Gender: {selectedCharacter.gender}</p>
+                </div>
+                <div>
+                  <MdInvertColors size={20} />
                   <p>Hair Color: {selectedCharacter.hair_color}</p>
+                </div>
+                <div>
+                  <BsFillPersonFill size={20} />
                   <p>Skin Color: {selectedCharacter.skin_color}</p>
                 </div>
-              </Description>
-              <HomeWorld>
-                <a href={selectedCharacter.homeworld}>
-                  Homeworld: {selectedCharacter.homeworld}
-                </a>
-              </HomeWorld>
+              </div>
             </CharacterDescription>
-
-            <CharacterRelatedThings>
-              <RelatedCard>
-                <h4>Related Films</h4>
-                <p>Episode IV: A New Hope</p>
-                <p>Episode V: A New Hope</p>
-                <p>Episode VI: A New Hope</p>
-                <p>Episode VII: A New Hope</p>
-              </RelatedCard>
-
-              <RelatedCard>
-                <h4>Related Vehicles</h4>
-                <p>Episode IV: A New Hope</p>
-                <p>Episode V: A New Hope</p>
-                <p>Episode VI: A New Hope</p>
-                <p>Episode VII: A New Hope</p>
-              </RelatedCard>
-
-              <RelatedCard>
-                <h4>Related Starships</h4>
-                <p>Episode IV: A New Hope</p>
-                <p>Episode V: A New Hope</p>
-                <p>Episode VI: A New Hope</p>
-                <p>Episode VII: A New Hope</p>
-              </RelatedCard>
-            </CharacterRelatedThings>
           </ModalContent>
         </Modal>
       )}

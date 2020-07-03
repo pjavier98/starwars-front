@@ -46,10 +46,16 @@ export const Container = styled.div`
     height: 25px;
     width: 25px;
     align-self: center;
+
+    svg {
+      color: #caaeae;
+    }
   }
 
   button:hover {
-    color: #ff9000;
-    transition: 0.2s;
+    svg {
+      color: #ff9000;
+      transition: 0.2s;
+    }
   }
 `;

@@ -48,58 +48,37 @@ export const ModalContent = styled.div`
   height: 80%;
   width: 70%;
   margin: 50px;
-  /* background: #fff; */
 `;
 
 export const CharacterDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 60%;
-  grid-template-columns: 1fr;
-  background: #fff;
+
   border-radius: 10px;
   background: #1d1c25;
   padding: 20px;
 
-  h4 {
-    text-align: center;
-    font-family: 'Roboto';
+  div {
+    h4 {
+      text-align: center;
+      font-family: 'Roboto';
+    }
+    div {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+
+      svg {
+        color: #ff9000;
+      }
+
+      p {
+        text-align: center;
+        font-family: 'Roboto';
+        margin-left: 10px;
+      }
+    }
   }
-`;
-
-export const HomeWorld = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 45px;
-  a {
-    text-decoration: none;
-    color: #fff;
-    align-self: center;
-    text-align: center;
-  }
-`;
-
-export const Description = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-top: 20px;
-
-  p {
-    margin-top: 15px;
-    font-family: 'Roboto';
-  }
-`;
-
-export const CharacterRelatedThings = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 40%;
-  grid-gap: 25px;
-  margin-top: 20px;
-`;
-
-export const RelatedCard = styled.div`
-  padding: 20px;
-  border-radius: 10px;
-  background: #1d1c25;
 `;
