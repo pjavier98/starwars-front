@@ -33,7 +33,7 @@ const Dashboard: React.FC = () => {
         </CategoryCard>
 
         <CategoryCard>
-          <Link to="/">
+          <Link to="/planet">
             <img src={planetsImg} alt="" />
             <p>Planets</p>
           </Link>

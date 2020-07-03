@@ -16,7 +16,7 @@ interface IProps {
   character: ICharacter;
 }
 
-const Cards: React.FC<IProps> = ({ character }: IProps) => {
+const CharacterCard: React.FC<IProps> = ({ character }: IProps) => {
   return (
     <Container>
       <div>
@@ -63,4 +63,4 @@ const Cards: React.FC<IProps> = ({ character }: IProps) => {
   );
 };
 
-export default Cards;
+export default CharacterCard;

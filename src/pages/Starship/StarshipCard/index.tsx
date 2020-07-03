@@ -2,11 +2,10 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { MdPerson } from 'react-icons/md';
-import { FaBirthdayCake } from 'react-icons/fa';
-import { GiBodyHeight, GiWeight, GiWorld } from 'react-icons/gi';
-import { AiOutlineMan, AiOutlineWoman } from 'react-icons/ai';
+import { MdPeople } from 'react-icons/md';
+import { FaPlane } from 'react-icons/fa';
 import { FiMoreHorizontal } from 'react-icons/fi';
+import { IoMdResize } from 'react-icons/io';
 
 import { IStarship } from '../index';
 
@@ -20,12 +19,12 @@ const Starship: React.FC<IProps> = ({ starship }: IProps) => {
   return (
     <Container>
       <div>
-        <MdPerson size={20} />
-        <p>Name: {starship.name}</p>
+        <FaPlane size={20} />
+        <p>Starship: {starship.name}</p>
       </div>
 
       <div>
-        <FaBirthdayCake size={20} />
+        <MdPeople size={20} />
         <p>Passengers: {starship.passengers}</p>
       </div>
 
@@ -52,7 +51,7 @@ const Starship: React.FC<IProps> = ({ starship }: IProps) => {
       )} */}
 
       <div>
-        <GiWorld size={20} />
+        <IoMdResize size={20} />
         <p>Length: {starship.length}</p>
       </div>
 
