@@ -1,6 +1,4 @@
-import React from 'react';
-
-import { Link } from 'react-router-dom';
+import React, { useCallback } from 'react';
 
 import { MdPeople } from 'react-icons/md';
 import { FaPlane } from 'react-icons/fa';
@@ -13,9 +11,20 @@ import { Container } from './styles';
 
 interface IProps {
   starship: IStarship;
+  setOpenModal: (openModal: boolean) => void;
+  setSelectedStarship: (starship: IStarship) => void;
 }
 
-const Starship: React.FC<IProps> = ({ starship }: IProps) => {
+const Starship: React.FC<IProps> = ({
+  starship,
+  setOpenModal,
+  setSelectedStarship,
+}: IProps) => {
+  const handleClick = useCallback(() => {
+    setSelectedStarship(starship);
+    setOpenModal(true);
+  }, [setSelectedStarship, starship, setOpenModal]);
+
   return (
     <Container>
       <div>
@@ -28,34 +37,12 @@ const Starship: React.FC<IProps> = ({ starship }: IProps) => {
         <p>Passengers: {starship.passengers}</p>
       </div>
 
-      {/* <div>
-        <GiBodyHeight size={20} />
-        <p>Height: {starship.height}</p>
-      </div>
-
-      <div>
-        <GiWeight size={20} />
-        <p>Mass: 77kg</p>
-      </div> */}
-
-      {/* {starship.gender === 'male' ? (
-        <div>
-          <AiOutlineMan size={20} />
-          <p>Gender: Male</p>
-        </div>
-      ) : (
-        <div>
-          <AiOutlineWoman size={20} />
-          <p>Gender: Female</p>
-        </div>
-      )} */}
-
       <div>
         <IoMdResize size={20} />
         <p>Length: {starship.length}</p>
       </div>
 
-      <button type="button" onClick={() => alert('q')}>
+      <button type="button" onClick={handleClick}>
         <FiMoreHorizontal size={25} />
       </button>
     </Container>
