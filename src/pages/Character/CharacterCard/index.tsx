@@ -1,10 +1,7 @@
-import React from 'react';
-
-import { Link } from 'react-router-dom';
+import React, { useCallback } from 'react';
 
 import { MdPerson } from 'react-icons/md';
 import { FaBirthdayCake } from 'react-icons/fa';
-import { GiBodyHeight, GiWeight, GiWorld } from 'react-icons/gi';
 import { AiOutlineMan, AiOutlineWoman } from 'react-icons/ai';
 import { FiMoreHorizontal } from 'react-icons/fi';
 
@@ -14,9 +11,20 @@ import { Container } from './styles';
 
 interface IProps {
   character: ICharacter;
+  setOpenModal: (openModal: boolean) => void;
+  setSelectedCharacter: (character: ICharacter) => void;
 }
 
-const CharacterCard: React.FC<IProps> = ({ character }: IProps) => {
+const CharacterCard: React.FC<IProps> = ({
+  character,
+  setOpenModal,
+  setSelectedCharacter,
+}: IProps) => {
+  const handleClick = useCallback(() => {
+    setSelectedCharacter(character);
+    setOpenModal(true);
+  }, [character, setSelectedCharacter, setOpenModal]);
+
   return (
     <Container>
       <div>
@@ -28,16 +36,6 @@ const CharacterCard: React.FC<IProps> = ({ character }: IProps) => {
         <FaBirthdayCake size={20} />
         <p>Birth Year: {character.birth_year}</p>
       </div>
-
-      {/* <div>
-        <GiBodyHeight size={20} />
-        <p>Height: {character.height}</p>
-      </div>
-
-      <div>
-        <GiWeight size={20} />
-        <p>Mass: 77kg</p>
-      </div> */}
 
       {character.gender === 'male' ? (
         <div>
@@ -51,12 +49,7 @@ const CharacterCard: React.FC<IProps> = ({ character }: IProps) => {
         </div>
       )}
 
-      {/* <div>
-        <GiWorld size={20} />
-        <p>Homeworld: {character.homeworld}</p>
-      </div> */}
-
-      <button type="button" onClick={() => alert('q')}>
+      <button type="button" onClick={handleClick}>
         <FiMoreHorizontal size={25} />
       </button>
     </Container>
