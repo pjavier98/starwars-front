@@ -17,7 +17,7 @@ import {
   Modal,
   ModalContent,
   ModalHeader,
-  CharacterDescription,
+  StarshipDescription,
 } from './styles';
 
 export interface IStarship {
@@ -69,7 +69,7 @@ const Starship: React.FC = () => {
             </button>
           </ModalHeader>
           <ModalContent>
-            <CharacterDescription>
+            <StarshipDescription>
               <div>
                 <h4>{selectedStarship.name}</h4>
                 <div>
@@ -97,7 +97,7 @@ const Starship: React.FC = () => {
                   <p>Starship class: {selectedStarship.starship_class}</p>
                 </div>
               </div>
-            </CharacterDescription>
+            </StarshipDescription>
           </ModalContent>
         </Modal>
       )}

@@ -50,7 +50,7 @@ export const ModalContent = styled.div`
   margin: 50px;
 `;
 
-export const CharacterDescription = styled.div`
+export const StarshipDescription = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;

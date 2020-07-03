@@ -26,14 +26,14 @@ const Dashboard: React.FC = () => {
         </CategoryCard>
 
         <CategoryCard>
-          <Link to="/starship">
+          <Link to="/starships">
             <img src={startshipImg} alt="starships" />
             <p>Starships</p>
           </Link>
         </CategoryCard>
 
         <CategoryCard>
-          <Link to="/planet">
+          <Link to="/planets">
             <img src={planetsImg} alt="" />
             <p>Planets</p>
           </Link>

@@ -16,8 +16,8 @@ const Routes: React.FC = () => (
 
     <Route path="/dashboard" exact component={Dashboard} />
     <Route path="/characters" exact component={Character} />
-    <Route path="/starship" exact component={Starship} />
-    <Route path="/planet" exact component={Planet} />
+    <Route path="/starships" exact component={Starship} />
+    <Route path="/planets" exact component={Planet} />
   </Switch>
 );
 
