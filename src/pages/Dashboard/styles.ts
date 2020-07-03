@@ -8,7 +8,7 @@ export const Content = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  padding: 50px 150px;
+  padding: 100px 150px;
   grid-gap: 50px;
 `;
 
@@ -19,8 +19,8 @@ export const CategoryCard = styled.div`
     text-decoration: none;
 
     img {
-      height: 150px;
-      width: 200px;
+      height: 200px;
+      width: 250px;
       border-radius: 10px;
     }
 

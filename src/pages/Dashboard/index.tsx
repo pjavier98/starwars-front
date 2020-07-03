@@ -20,22 +20,22 @@ const Dashboard: React.FC = () => {
       <Content>
         <CategoryCard>
           <Link to="/characters">
-            <img src={characterImg} alt="" />
+            <img src={characterImg} alt="characters" />
             <p>Character</p>
           </Link>
         </CategoryCard>
-        <CategoryCard>
-          <Link to="/">
-            <img src={filmsImg} alt="" />
+        {/* <CategoryCard>
+          <Link to="/films">
+            <img src={filmsImg} alt="films" />
             <p>Films</p>
           </Link>
-        </CategoryCard>
-        <CategoryCard>
-          <Link to="/">
-            <img src={speciesImg} alt="" />
+        </CategoryCard> */}
+        {/* <CategoryCard>
+          <Link to="/species">
+            <img src={speciesImg} alt="species" />
             <p>Species</p>
           </Link>
-        </CategoryCard>
+        </CategoryCard> */}
 
         <CategoryCard>
           <Link to="/">
@@ -43,12 +43,12 @@ const Dashboard: React.FC = () => {
             <p>Starships</p>
           </Link>
         </CategoryCard>
-        <CategoryCard>
+        {/* <CategoryCard>
           <Link to="/">
             <img src={vehiclesImg} alt="" />
             <p>Vehicles</p>
           </Link>
-        </CategoryCard>
+        </CategoryCard> */}
         <CategoryCard>
           <Link to="/">
             <img src={planetsImg} alt="" />
