@@ -7,5 +7,5 @@ export const Content = styled.div`
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
   padding: 50px 50px;
-  grid-gap: 25px;
+  grid-gap: 15px;
 `;

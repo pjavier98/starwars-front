@@ -5,7 +5,7 @@ import SignIn from '../pages/SignIn';
 import SignUp from '../pages/SignUp';
 
 import Dashboard from '../pages/Dashboard';
-import Characters from '../pages/Characters';
+import Character from '../pages/Character';
 
 const Routes: React.FC = () => (
   <Switch>
@@ -13,7 +13,7 @@ const Routes: React.FC = () => (
     <Route path="/signup" exact component={SignUp} />
 
     <Route path="/dashboard" exact component={Dashboard} />
-    <Route path="/characters" exact component={Characters} />
+    <Route path="/characters" exact component={Character} />
   </Switch>
 );
 

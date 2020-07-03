@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import Header from '../../components/Header';
+import Pagination from '../../components/Pagination';
 import CharacterCard from './CharacterCard';
 
 import swapi from '../../services/swapi';
@@ -24,8 +25,6 @@ const Characters: React.FC = () => {
   useEffect(() => {
     async function getCharacters() {
       const response = await swapi.get(`/people/?page=${page}`);
-
-      console.log(response.data.results);
       setCharacters(response.data.results);
     }
 
@@ -37,9 +36,10 @@ const Characters: React.FC = () => {
       <Header />
       <Content>
         {characters.map(character => (
-          <CharacterCard key={character.url} data={character} />
+          <CharacterCard key={character.url} character={character} />
         ))}
       </Content>
+      <Pagination page={page} setPage={setPage} />
     </Container>
   );
 };

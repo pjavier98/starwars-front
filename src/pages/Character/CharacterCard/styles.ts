@@ -31,4 +31,16 @@ export const Container = styled.div`
       margin-top: 15px;
     }
   }
+
+  button {
+    border: 0;
+    margin-top: 25px;
+    background: none;
+    color: #fff;
+  }
+
+  button:hover {
+    color: #ff9000;
+    transition: 0.2s;
+  }
 `;
