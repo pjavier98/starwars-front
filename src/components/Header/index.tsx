@@ -2,7 +2,6 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { FiPower } from 'react-icons/fi';
 import { HeaderContent, Profile } from './styles';
 
 import logoImg from '../../assets/logo.png';
@@ -14,7 +13,7 @@ const Header: React.FC = () => {
 
   return (
     <HeaderContent>
-      <Link to="/dashboard">
+      <Link to="/">
         <img src={logoImg} alt="GoBarber" />
       </Link>
 
@@ -28,10 +27,6 @@ const Header: React.FC = () => {
           <span>Bem-vindo</span>
           <strong>{user.name}</strong>
         </div>
-
-        <button type="button" onClick={() => {}}>
-          <FiPower />
-        </button>
       </Profile>
     </HeaderContent>
   );

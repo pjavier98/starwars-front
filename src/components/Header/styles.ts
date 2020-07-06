@@ -24,30 +24,12 @@ export const HeaderContent = styled.div`
       transition: border 0.2s;
     }
   }
-
-  button {
-    margin-left: 70px;
-    margin-right: 50px;
-    background: transparent;
-    border: 0;
-    svg {
-      color: #999591;
-      width: 20px;
-      height: 20px;
-    }
-  }
-
-  button:hover {
-    svg {
-      color: #ff9000;
-      transition: 0.2s;
-    }
-  }
 `;
 
 export const Profile = styled.div`
   display: flex;
   align-items: center;
+  margin-right: 50px;
 
   img {
     width: 56px;
