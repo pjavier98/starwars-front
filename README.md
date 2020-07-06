@@ -13,7 +13,7 @@ Star War
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/pjavier98/starwars-front">
 
   <a href="https://github.com/pjavier98/starwars-front/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pjavier98/github-explorer">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/pjavier98/starwars-front">
   </a>
 
   <a href="http://makeapullrequest.com">
