@@ -1,11 +1,11 @@
 <h1 align="center">
 <br>
-  <img alt="logo" src="../starwars-front/src/assets/logo.png" />
+  <img alt="logo starwar" src="src/assets/logo.png" width="200px" height="100px" />
 <br>
 Star War
 </h1>
 
-<p align="center">Aplications to view characters, starships and planets from STAR WAR consuming https://swapi.dev/ API </p>
+<p align="center">Aplications to view characters, starships and planets from STAR WARS</p>
 
 <p align="center">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/pjavier98/starwars-front">
@@ -24,11 +24,10 @@ Star War
 
 <hr />
 
-<img alt="Application" src="../starwars-front/src/assets/starwar-front.png" />
+<img alt="Application" src="src/assets/starwar-front.png" />
 
 ## Description
-
-
+Application made with ReactJS, consuming https://swapi.dev/ API and showing characters, starships and planets from STAR WARS.
 ## Features
 
 This app features all the latest tools and practices in web development!
@@ -37,6 +36,7 @@ This app features all the latest tools and practices in web development!
 - **CSS** — styled-components
 - **Lint** — ESlint/Prettier/Editor Config
 - **Axios** — A library to make HTTP requests
+- **Swapi** — The API that was consumed
 
 ## Getting started
 1. Clone this repo using `https://github.com/pjavier98/starwars-front.git`
